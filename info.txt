@@ -1,0 +1,37 @@
+***DATABASE***
+Utilizando database MYSQL. Para criar a estrutura inicial, utilizei o proprio CREATE do JPA (spring.jpa.hibernate.ddl-auto)
+MELHORIA
+Implementar o database utilizando LiquiBase (https://www.liquibase.org/) para controle de versão da base de dados 
+
+***DOCKER***
+Utilizando um container DOCKER para 
+	Subir o banco MYSQL	
+MELHORIA
+Criar um DOCKERFILE nos servicos para subi-los automaticamente num container
+
+***SEGURANÇA***
+MELHORIA
+Criar serviço de segurança (JWT Token) e validar o token nas APIs.
+
+***SWAGGER***
+Implementado SWAGGER nas APIs para que o client tenha informações de como utilizá-las
+MELHORIA
+
+***LOMBOK***
+MELHORIA
+Fazer funcionar!!!
+
+***LOGGING***
+MELHORIA
+Implementar
+
+***TESTES***
+MELHORIA
+Implementar
+
+* Asynchronous processing
+* AWS
+* Clean Code
+
+
+
