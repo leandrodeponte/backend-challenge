@@ -4,8 +4,7 @@ MELHORIA
 Implementar o database utilizando LiquiBase (https://www.liquibase.org/) para controle de versão da base de dados 
 
 ***DOCKER***
-Utilizando um container DOCKER para 
-	Subir o banco MYSQL	
+Utilizando um container DOCKER para subir o banco MYSQL	
 MELHORIA
 Criar um DOCKERFILE nos servicos para subi-los automaticamente num container
 
@@ -15,6 +14,11 @@ Criar serviço de segurança (JWT Token) e validar o token nas APIs.
 
 ***SWAGGER***
 Implementado SWAGGER nas APIs para que o client tenha informações de como utilizá-las
+
+http://127.0.0.1:8080/swagger-ui.html#/order-m-controller
+http://127.0.0.1:8081/swagger-ui.html#/payment-m-controller
+http://127.0.0.1:8082/swagger-ui.html#/store-m-controller
+
 MELHORIA
 
 ***LOMBOK***
@@ -27,7 +31,7 @@ Implementar
 
 ***TESTES***
 MELHORIA
-Implementar
+Verificar teste da API store
 
 * Asynchronous processing
 * AWS

@@ -21,13 +21,47 @@ public class OrderItem {
     @Getter @Setter
     private int quantity;
 
-    @ManyToOne
-    @JoinColumn(name = "orderm_id")
+    @Transient
     @Getter @Setter
     private OrderM orderm;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Long getUnitPrice() {
+        return unitPrice;
+    }
+
+    public void setUnitPrice(Long unitPrice) {
+        this.unitPrice = unitPrice;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public OrderM getOrderm() {
+        return orderm;
+    }
 
     public void setOrderm(OrderM orderm) {
         this.orderm = orderm;
     }
-
 }

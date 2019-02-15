@@ -1,9 +1,0 @@
-/home/leandroponte/Projetos/backend-challenge/backend_challenge-order/src/main/java/com/invillia/acme/orderservice/service/OrderItemRepository.java
-/home/leandroponte/Projetos/backend-challenge/backend_challenge-order/src/main/java/com/invillia/acme/orderservice/model/OrderItem.java
-/home/leandroponte/Projetos/backend-challenge/backend_challenge-order/src/main/java/com/invillia/acme/orderservice/service/OrderMService.java
-/home/leandroponte/Projetos/backend-challenge/backend_challenge-order/src/main/java/com/invillia/acme/orderservice/AcmeOrderApplication.java
-/home/leandroponte/Projetos/backend-challenge/backend_challenge-order/src/main/java/com/invillia/acme/orderservice/enums/OrderStatusEnum.java
-/home/leandroponte/Projetos/backend-challenge/backend_challenge-order/src/main/java/com/invillia/acme/orderservice/controller/OrderMController.java
-/home/leandroponte/Projetos/backend-challenge/backend_challenge-order/src/main/java/com/invillia/acme/orderservice/SwaggerConfig.java
-/home/leandroponte/Projetos/backend-challenge/backend_challenge-order/src/main/java/com/invillia/acme/orderservice/service/OrderMRepository.java
-/home/leandroponte/Projetos/backend-challenge/backend_challenge-order/src/main/java/com/invillia/acme/orderservice/model/OrderM.java

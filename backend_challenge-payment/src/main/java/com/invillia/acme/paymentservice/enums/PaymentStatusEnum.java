@@ -1,6 +1,6 @@
-package com.invillia.acme.orderservice.enums;
+package com.invillia.acme.paymentservice.enums;
 
 public enum PaymentStatusEnum {
 
-    PENDING, PAID, REFUSED;
+    PENDING, CONCLUDED, REFUSED;
 }

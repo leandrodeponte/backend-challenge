@@ -25,13 +25,13 @@ public class OrderMController {
     public ResponseEntity<OrderM> get(
             @PathVariable("id") Long idOrderM) {
 
-        OrderM order = orderMRepository.findOneById(idOrderM);
+        OrderM order = orderMService.findOneById(idOrderM);
 
-        if(order == null){
+        if(order == null) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
 
-        return new ResponseEntity<OrderM>(order, HttpStatus.OK);
+        return new ResponseEntity<>(order, HttpStatus.OK);
 
     }
 

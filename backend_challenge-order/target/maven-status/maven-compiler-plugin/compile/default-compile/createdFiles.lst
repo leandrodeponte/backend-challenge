@@ -1,9 +1,0 @@
-com/invillia/acme/orderservice/controller/OrderMController.class
-com/invillia/acme/orderservice/model/OrderItem.class
-com/invillia/acme/orderservice/model/OrderM.class
-com/invillia/acme/orderservice/service/OrderMRepository.class
-com/invillia/acme/orderservice/service/OrderMService.class
-com/invillia/acme/orderservice/AcmeOrderApplication.class
-com/invillia/acme/orderservice/SwaggerConfig.class
-com/invillia/acme/orderservice/enums/OrderStatusEnum.class
-com/invillia/acme/orderservice/service/OrderItemRepository.class

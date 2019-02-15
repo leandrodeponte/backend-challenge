@@ -1,4 +1,4 @@
-package com.invillia.acme.storeservice.model;
+package com.invillia.acme.model;
 
 import lombok.Getter;
 import lombok.Setter;
