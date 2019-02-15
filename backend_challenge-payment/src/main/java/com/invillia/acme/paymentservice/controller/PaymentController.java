@@ -16,6 +16,9 @@ public class PaymentController {
     @Autowired
     PaymentRepository paymentRepository;
 
+    @Autowired
+    PaymentValidator paymentValidator;
+
     @GetMapping("/payment/{id}")
     public ResponseEntity<Payment> get(
             @PathVariable(value = "id") Long id
@@ -30,7 +33,6 @@ public class PaymentController {
             @RequestBody Payment payment
     ) {
 
-        PaymentValidator paymentValidator = new PaymentValidator();
         paymentValidator.validate(payment);
 
         if(paymentValidator.hasErrors()){

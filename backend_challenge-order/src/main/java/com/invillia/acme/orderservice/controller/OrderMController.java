@@ -65,7 +65,7 @@ public class OrderMController {
     public ResponseEntity<List<OrderM>> get(
             @RequestParam("address") String address) {
 
-        List<OrderM> orderList = orderMRepository.findByAddress(address);
+        List<OrderM> orderList = orderMRepository.findByAddressContaining(address);
 
         if(orderList == null || orderList.isEmpty()){
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);

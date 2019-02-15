@@ -9,5 +9,5 @@ public interface OrderMRepository extends JpaRepository<OrderM, Long> {
 
     OrderM findOneById(Long id);
     OrderM save(OrderM orderM);
-    List<OrderM> findByAddress(String adress);
+    List<OrderM> findByAddressContaining(String adress);
 }
