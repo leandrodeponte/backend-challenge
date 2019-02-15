@@ -5,6 +5,7 @@ import com.invillia.acme.orderservice.model.OrderM;
 import com.invillia.acme.orderservice.service.OrderItemService;
 import com.invillia.acme.orderservice.service.OrderMRepository;
 import com.invillia.acme.orderservice.service.OrderMService;
+import com.invillia.acme.orderservice.validator.OrderMValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,6 +27,9 @@ public class OrderMController {
 
     @Autowired
     OrderItemService orderItemService;
+
+    @Autowired
+    OrderMValidator orderMValidator;
 
     @GetMapping("/orderm/{id}")
     public ResponseEntity<OrderM> get(
@@ -84,5 +88,23 @@ public class OrderMController {
         return new ResponseEntity<OrderM>(HttpStatus.OK);
 
     }
+
+    @PutMapping("/orderm/{id}/refund")
+    public ResponseEntity<OrderM> refund(
+            @PathVariable( value = "id") Long id) {
+
+        orderMValidator.validate(id);
+
+        if(orderMValidator.hasErrors()){
+            return new ResponseEntity(orderMValidator, HttpStatus.PRECONDITION_FAILED);
+        }
+
+        OrderM storeUpdated = orderMService.refund(id);
+
+        return new ResponseEntity<OrderM>(HttpStatus.OK);
+
+    }
+
+
 
 }

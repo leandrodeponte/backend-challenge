@@ -20,6 +20,8 @@ import java.util.Optional;
 
     public void  validate(Long id, Store store){
 
+        erros = new ArrayList();
+
         if(Objects.isNull(id)){
             erros.add("O id é obrigatório.");
         }

@@ -29,7 +29,7 @@ public class PaymentController {
     }
 
     @PostMapping("/payment/")
-    public ResponseEntity<Payment> get(
+    public ResponseEntity<Payment> post(
             @RequestBody Payment payment
     ) {
 

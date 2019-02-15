@@ -1,0 +1,341 @@
+{
+	"id": "7c157517-7adf-dcbd-2f23-367ac049c5e5",
+	"name": "backend-challenge",
+	"description": "",
+	"order": [
+		"daed0d92-9106-3ff8-df2d-367f20f1a9c6",
+		"b3095512-0407-6bc6-5ec3-1647d5dafd32",
+		"c8982aef-e783-60ae-5758-3f044e7a8e4a",
+		"be81368b-72fd-76b1-98bb-5209ec994fcd",
+		"b6979acd-88a0-1f89-6bdb-9f6e1b0d289c",
+		"f974d2e3-1773-b2aa-430f-34dbf111a568",
+		"94087c5b-27b1-18b4-64b1-a28f3fccdd1a",
+		"86da752f-c7d4-037c-a4fc-efaad3bdf534",
+		"44e364de-bbf4-d061-9608-b830183145f8",
+		"5a119a9e-25a6-8291-783b-375749e081e8",
+		"bdd928c1-d143-4d96-4391-e9ccca333be1"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1550109179435,
+	"owner": "733225",
+	"public": false,
+	"requests": [
+		{
+			"id": "44e364de-bbf4-d061-9608-b830183145f8",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8082/api/store/17",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1550197789773,
+			"name": "STORE-PUT",
+			"description": "",
+			"collectionId": "7c157517-7adf-dcbd-2f23-367ac049c5e5",
+			"responses": [],
+			"rawModeData": "{\n  \"address\": \"BABA\",\n  \"id\": 1,\n  \"name\": \"UI\"\n}"
+		},
+		{
+			"id": "5a119a9e-25a6-8291-783b-375749e081e8",
+			"headers": "",
+			"headerData": [],
+			"url": "http://127.0.0.1:8081/api/payment/1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "7c157517-7adf-dcbd-2f23-367ac049c5e5",
+			"data": null,
+			"dataMode": "params",
+			"name": "PAYMENT-GET",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1550202992370,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "86da752f-c7d4-037c-a4fc-efaad3bdf534",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8082/api/store",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "7c157517-7adf-dcbd-2f23-367ac049c5e5",
+			"data": [],
+			"dataMode": "raw",
+			"name": "STORE_POST",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1550193033520,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n  \"address\": \"xxx\",\n  \"id\": 2,\n  \"name\": \"kkkk\"\n}"
+		},
+		{
+			"id": "94087c5b-27b1-18b4-64b1-a28f3fccdd1a",
+			"headers": "",
+			"headerData": [],
+			"url": "http://127.0.0.1:8082/api/store?name=k",
+			"queryParams": [
+				{
+					"key": "name",
+					"value": "k",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1550192994606,
+			"name": "STORE_GET_BYPARAMS",
+			"description": "",
+			"collectionId": "7c157517-7adf-dcbd-2f23-367ac049c5e5",
+			"responses": []
+		},
+		{
+			"id": "b3095512-0407-6bc6-5ec3-1647d5dafd32",
+			"headers": "content-type: application/json\n",
+			"headerData": [
+				{
+					"key": "content-type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8080/api/orderm/2/orderItemList/\n",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1550215860063,
+			"name": "ORDER-ITEMLIST-GET",
+			"description": "",
+			"collectionId": "7c157517-7adf-dcbd-2f23-367ac049c5e5",
+			"responses": []
+		},
+		{
+			"id": "b6979acd-88a0-1f89-6bdb-9f6e1b0d289c",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8080/api/orderm/2/refund/",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1550225114196,
+			"name": "ORDER-PUT-REFUND",
+			"description": "",
+			"collectionId": "7c157517-7adf-dcbd-2f23-367ac049c5e5",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "bdd928c1-d143-4d96-4391-e9ccca333be1",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8081/api/payment/",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1550224194417,
+			"name": "PAYMENT_POST",
+			"description": "",
+			"collectionId": "7c157517-7adf-dcbd-2f23-367ac049c5e5",
+			"responses": [],
+			"rawModeData": "{\n  \"creditCardNumber\": 5674867564323,\n  \"id\": 0,\n  \"idOrder\": 25445,\n  \"paymentStatus\": \"PENDING\"\n}"
+		},
+		{
+			"id": "be81368b-72fd-76b1-98bb-5209ec994fcd",
+			"headers": "",
+			"headerData": [],
+			"url": "http://127.0.0.1:8080/api/orderm/?address=x",
+			"queryParams": [
+				{
+					"key": "address",
+					"value": "x",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1550219025854,
+			"name": "ORDER-GET-BYPARAMS",
+			"description": "",
+			"collectionId": "7c157517-7adf-dcbd-2f23-367ac049c5e5",
+			"responses": []
+		},
+		{
+			"id": "c8982aef-e783-60ae-5758-3f044e7a8e4a",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8080/api/orderm/",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1550224192643,
+			"name": "ORDER-POST",
+			"description": "",
+			"collectionId": "7c157517-7adf-dcbd-2f23-367ac049c5e5",
+			"responses": [],
+			"rawModeData": "{\n  \"address\": \"Rua Episcopal\",\n  \"confirmationDate\": \"2019-02-14T22:20:15.021Z\",\n  \"orderItemList\": [\n    {\n      \"description\": \"Item 1\",\n      \"quantity\": 10,\n      \"unitPrice\": 3\n    },\n    {\n      \"description\": \"Item 2\",\n      \"quantity\": 5,\n      \"unitPrice\": 3\n    },\n    {\n      \"description\": \"Item 3\",\n      \"quantity\": 5,\n      \"unitPrice\": 3\n    },\n    {\n      \"description\": \"Item 4\",\n      \"quantity\": 5,\n      \"unitPrice\": 3\n    }\n  ],\n  \"orderStatus\": \"PENDING\"\n}"
+		},
+		{
+			"id": "daed0d92-9106-3ff8-df2d-367f20f1a9c6",
+			"headers": "content-type: application/json\n",
+			"headerData": [
+				{
+					"key": "content-type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8080/api/orderm/2",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1550218013535,
+			"name": "ORDER-GET",
+			"description": "",
+			"collectionId": "7c157517-7adf-dcbd-2f23-367ac049c5e5",
+			"responses": []
+		},
+		{
+			"id": "f974d2e3-1773-b2aa-430f-34dbf111a568",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8082/api/store/2",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1550218174378,
+			"name": "STORE-GET",
+			"description": "",
+			"collectionId": "7c157517-7adf-dcbd-2f23-367ac049c5e5",
+			"responses": []
+		}
+	]
+}

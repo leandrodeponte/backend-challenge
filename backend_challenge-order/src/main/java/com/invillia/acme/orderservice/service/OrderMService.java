@@ -1,5 +1,6 @@
 package com.invillia.acme.orderservice.service;
 
+import com.invillia.acme.orderservice.enums.OrderStatusEnum;
 import com.invillia.acme.orderservice.model.OrderItem;
 import com.invillia.acme.orderservice.model.OrderM;
 import org.hibernate.Hibernate;
@@ -40,6 +41,24 @@ public class OrderMService {
         }
 
         return order;
+
+    }
+
+    public OrderM refund(Long id){
+
+        Optional<OrderM> orderMValidate = orderMRepository.findById(id);
+        OrderM updated = new OrderM();
+
+        if(!orderMValidate.isPresent()){
+            return null;
+        }
+
+        updated = orderMValidate.get();
+        updated.setOrderStatus(OrderStatusEnum.REFUNDED);
+
+        orderMRepository.save(updated);
+
+        return updated;
 
     }
 

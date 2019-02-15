@@ -19,15 +19,11 @@ http://127.0.0.1:8080/swagger-ui.html#/order-m-controller
 http://127.0.0.1:8081/swagger-ui.html#/payment-m-controller
 http://127.0.0.1:8082/swagger-ui.html#/store-m-controller
 
-MELHORIA
-
-***LOMBOK***
-MELHORIA
-Fazer funcionar!!!
+Em anexo, o arquivo do POSTMAN utilizado para testes.(backend-challenge.postman_collection)
 
 ***LOGGING***
 MELHORIA
-Implementar
+Implementar log na aplicação
 
 ***TESTES***
 MELHORIA
@@ -35,7 +31,7 @@ Criar testes unitários para a aplicação
 
 ***Asynchronous processing***
 MELHORIA
-Processar o pagamento de maneira assincrona. Avaliar utiliar de Transcation
+Processar o pagamento de maneira assincrona. Avaliar utilização de Transcation
 
 * AWS
 * Clean Code

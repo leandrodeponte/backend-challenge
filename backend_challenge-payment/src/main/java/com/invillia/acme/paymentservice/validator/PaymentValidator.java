@@ -30,6 +30,8 @@ public class PaymentValidator {
 
     public void validate(Payment payment){
 
+        erros = new ArrayList();
+
         if(Objects.isNull(payment)){
             erros.add("Pagamento não é válido.");
         }
