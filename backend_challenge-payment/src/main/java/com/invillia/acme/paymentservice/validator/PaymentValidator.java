@@ -1,22 +1,24 @@
 package com.invillia.acme.paymentservice.validator;
 
+import com.invillia.acme.paymentservice.model.OrderItem;
 import com.invillia.acme.paymentservice.model.Payment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
-
 
 
 @Component
 public class PaymentValidator {
 
-    @Value("${url.frontend.recuperar.senha}")
+    @Value("${url.acme.order_api}")
     private String url;
 
     @Autowired
@@ -30,23 +32,21 @@ public class PaymentValidator {
             erros.add("Pagamento não é válido.");
         }
 
+        //TODO buscar da configuração
+        //RestTemplate restTemplate = new RestTemplate();
         RestTemplate restTemplate = new RestTemplate();
-        OrderM order = restTemplate.getForObject(
-                "url" + "/order/"+payment.getIdOrder(),
-                OrderM.class);
+        ResponseEntity<List<OrderItem>> response = restTemplate.exchange(
+                "http://127.0.0.1:8080/api/orderm/"+payment.getIdOrder()+"/orderItemList/",
+                HttpMethod.GET,
+                null,
+                new ParameterizedTypeReference<List<OrderItem>>(){});
+        List<OrderItem> orderItemList = response.getBody();
 
-        if(Objects.isNull(order)){
+        //validar se pedido existe
+        if(Objects.isNull(orderItemList) || orderItemList.isEmpty()){
             erros.add("Não há pedido para o pagamento requerido.");
         }
 
-        //TODO validar se pedido existe
-        //TODO validar se o valor do pagamento é igual ao pedido
-
-
-
-        if(false){
-            erros.add("Pedido não encontrado no sistema.");
-        }
     }
 
     public boolean hasErrors(){

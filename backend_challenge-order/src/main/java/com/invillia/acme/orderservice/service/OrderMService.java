@@ -22,8 +22,8 @@ public class OrderMService {
         OrderM orderSaved = orderMRepository.save(orderM);
 
         orderSaved.getOrderItemList().forEach( i ->
-            {
-                i.setOrderm(orderSaved);
+        {
+                i.setOrderm(orderSaved.getId());
                 orderItemRepository.save(i);
             }
         );
@@ -36,7 +36,7 @@ public class OrderMService {
         OrderM order = orderMRepository.findOneById(id);
 
         if(order != null){
-            Hibernate.initialize(order.getOrderItemList());
+           // Hibernate.initialize(order.getOrderItemList());
         }
 
         return order;

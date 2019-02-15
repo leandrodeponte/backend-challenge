@@ -16,7 +16,7 @@ public class Payment {
     private Long id;
 
     @Getter @Setter
-    private Long creditaCardNumber;
+    private Long creditCardNumber;
 
     @Getter @Setter
     private PaymentStatusEnum paymentStatus;
@@ -32,12 +32,12 @@ public class Payment {
         this.id = id;
     }
 
-    public Long getCreditaCardNumber() {
-        return creditaCardNumber;
+    public Long getCreditCardNumber() {
+        return creditCardNumber;
     }
 
-    public void setCreditaCardNumber(Long creditaCardNumber) {
-        this.creditaCardNumber = creditaCardNumber;
+    public void setCreditCardNumber(Long creditCardNumber) {
+        this.creditCardNumber = creditCardNumber;
     }
 
     public PaymentStatusEnum getPaymentStatus() {

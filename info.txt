@@ -31,9 +31,12 @@ Implementar
 
 ***TESTES***
 MELHORIA
-Verificar teste da API store
+Criar testes unitários para a aplicação
 
-* Asynchronous processing
+***Asynchronous processing***
+MELHORIA
+Processar o pagamento de maneira assincrona. Avaliar utiliar de Transcation
+
 * AWS
 * Clean Code
 

@@ -1,9 +1,11 @@
-package com.invillia.acme.orderservice.model;
+package com.invillia.acme.paymentservice.model;
 
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
 public class OrderItem {

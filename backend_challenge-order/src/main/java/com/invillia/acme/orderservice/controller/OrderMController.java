@@ -1,6 +1,8 @@
 package com.invillia.acme.orderservice.controller;
 
+import com.invillia.acme.orderservice.model.OrderItem;
 import com.invillia.acme.orderservice.model.OrderM;
+import com.invillia.acme.orderservice.service.OrderItemService;
 import com.invillia.acme.orderservice.service.OrderMRepository;
 import com.invillia.acme.orderservice.service.OrderMService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Objects;
 
 @RestController
 @CrossOrigin
@@ -21,6 +24,9 @@ public class OrderMController {
     @Autowired
     OrderMService orderMService;
 
+    @Autowired
+    OrderItemService orderItemService;
+
     @GetMapping("/orderm/{id}")
     public ResponseEntity<OrderM> get(
             @PathVariable("id") Long idOrderM) {
@@ -32,6 +38,26 @@ public class OrderMController {
         }
 
         return new ResponseEntity<>(order, HttpStatus.OK);
+
+    }
+
+    @GetMapping("/orderm/{id}/orderItemList/")
+    public ResponseEntity<List<OrderItem>> getItemlList(
+            @PathVariable("id") Long idOrderm) {
+
+        OrderM order = orderMService.findOneById(idOrderm);
+
+        if(Objects.isNull(order)) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+
+        List<OrderItem> orderItemList = orderItemService.findAllByIdOrderm(idOrderm);
+
+        if(Objects.isNull(orderItemList.isEmpty())) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+
+        return new ResponseEntity<>(orderItemList, HttpStatus.OK);
 
     }
 

@@ -1,7 +1,6 @@
 package com.invillia.acme.orderservice.model;
 
 import com.invillia.acme.orderservice.enums.OrderStatusEnum;
-import com.invillia.acme.paymentservice.model.Payment;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -24,15 +23,11 @@ public class OrderM implements Serializable {
     @Getter @Setter
     private Date confirmationDate;
 
-    @Getter @Setter
-    private OrderStatusEnum orderStatus;
-
     @Transient
-    @Getter @Setter
     private List<OrderItem> orderItemList = new ArrayList<>();
 
     @Getter @Setter
-    private Payment payment = new Payment();
+    private OrderStatusEnum orderStatus;
 
     public Long getId() {
         return id;
